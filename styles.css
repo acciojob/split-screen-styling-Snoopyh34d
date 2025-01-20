@@ -22,7 +22,7 @@ body {
   width: 83.33%; /* 5/6th of the width */
 }
 
-.content-section {
+.content {
   display: flex;
   flex: 1;
 }
