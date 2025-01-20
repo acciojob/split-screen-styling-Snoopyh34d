@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+		*{
+			margin:0;
+			padding:0;
+		}
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            flex: 1; /* Make container take up remaining space */
+            display: flex;
+        }
+
+        .navbar {
+            width: calc(1/6 * 100vw);
+            background-color: #D7E8D4;
+            padding: 1em;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+        }
+
+        .header {
+            height: calc(1/5 * 100vh);
+            background-color: yellowgreen;
+            padding: 1em;
+        }
+
+        .content {
+            flex: 1; /* Make content take up remaining space */
+            display: flex;
+            padding: 1em;
+        }
+
+        .article {
+            width: calc(3/4 * 100%);
+            min-height: 60vh;
+            padding: 1em;
+        }
+
+        .aside {
+            width: calc(1/4 * 100%);
+            padding: 1em;
+			background-color:rgb(245,245,220);
+        }
+
+        .footer {
+            height: calc(1/5 * 100vh);
+            background-color: yellowgreen;
+            padding: 1em;
+        }
+    </style>
 </head>
 <body>
-      <div class="content">
 
-          <div class="navigation-bar">
-                <nav>
-                    Nav
-                </nav>
-          </div>
-
-          <div class="main-content">
-
-              <div class="header">
-                  Header
-              </div>
-
-            <div class="content-section">
-
+    <div class="container">
+        <div class="navbar">
+            <h3>Navbar</h3>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h3>Header</h3>
+            </div>
+            <div class="content">
                 <div class="article">
-                    Article
+                    <h3>Article</h3>
                 </div>
-
                 <div class="aside">
-                    Aside
+                    <h3>Aside</h3>
                 </div>
-
             </div>
-
             <div class="footer">
-                  Footer
+                <h3>Footer</h3>
             </div>
+        </div>
+    </div>
 
-          </div>
-
-
-      </div>
 </body>
 </html>
