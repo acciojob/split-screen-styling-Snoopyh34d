@@ -1,93 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Layout</title>
-    <style>
-		*{
-			margin:0;
-			padding:0;
-		}
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .container {
-            flex: 1; /* Make container take up remaining space */
-            display: flex;
-        }
+    /* Body Layout */
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
 
-        .navbar {
-            width: calc(1/6 * 100vw);
-            background-color: #D7E8D4;
-            padding: 1em;
-        }
+    /* Wrapper for main content to separate nav and content */
+    .wrapper {
+      display: flex;
+      flex: 1;
+    }
 
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            padding: 1em;
-        }
+    /* Left Navigation Bar */
+    .navigation-bar {
+      background-color: #D7E8D4;
+      width: 16.67%; /* 1/6th of the width */
+      height: 100vh; /* Full viewport height */
+      padding: 1em;
+    }
 
-        .header {
-            height: calc(1/5 * 100vh);
-            background-color: yellowgreen;
-            padding: 1em;
-        }
+    /* Main Content Area */
+    .main-content {
+      width: 83.33%; /* Remaining 5/6th of the width */
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+    }
 
-        .content {
-            flex: 1; /* Make content take up remaining space */
-            display: flex;
-            padding: 1em;
-        }
+    /* Header */
+    .header {
+      background-color: yellowgreen;
+      height: 20vh; /* 1/5th of the height */
+      padding: 1em;
+    }
 
-        .article {
-            width: calc(3/4 * 100%);
-            min-height: 60vh;
-            padding: 1em;
-        }
+    /* Content Section */
+    .content-section {
+      display: flex;
+      flex: 1;
+      gap: 1em;
+    }
 
-        .aside {
-            width: calc(1/4 * 100%);
-            padding: 1em;
-			background-color:rgb(245,245,220);
-        }
+    /* Article Section */
+    .article {
+      flex: 3; /* 3/4th of the content width */
+      min-height: 60vh; /* Minimum height of 60vh */
+      padding: 1em;
+      background-color: #f4f4f4;
+    }
 
-        .footer {
-            height: calc(1/5 * 100vh);
-            background-color: yellowgreen;
-            padding: 1em;
-        }
-    </style>
+    /* Aside Section */
+    .aside {
+      flex: 1; /* 1/4th of the content width */
+      padding: 1em;
+      background-color: #f0f0f0;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: yellowgreen;
+      height: 20vh; /* 1/5th of the height */
+      padding: 1em;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+      }
+
+      .main-content {
+        width: 100%;
+      }
+
+      .content-section {
+        flex-direction: column;
+      }
+
+      .article, .aside {
+        width: 100%;
+        flex: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="navbar">
-            <h3>Navbar</h3>
-        </div>
-        <div class="main-content">
-            <div class="header">
-                <h3>Header</h3>
-            </div>
-            <div class="content">
-                <div class="article">
-                    <h3>Article</h3>
-                </div>
-                <div class="aside">
-                    <h3>Aside</h3>
-                </div>
-            </div>
-            <div class="footer">
-                <h3>Footer</h3>
-            </div>
-        </div>
+  <!-- Wrapper containing navigation and main content -->
+  <div class="wrapper">
+
+    <!-- Left Navigation Bar -->
+    <div class="navigation-bar">
+      <nav>
+        Nav
+      </nav>
     </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+      <!-- Header -->
+      <div class="header">
+        Header
+      </div>
+
+      <!-- Content Section -->
+      <div class="content-section">
+
+        <!-- Article Section -->
+        <div class="article">
+          Article
+        </div>
+
+        <!-- Aside Section -->
+        <div class="aside">
+          Aside
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        Footer
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
