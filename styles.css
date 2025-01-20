@@ -59,7 +59,7 @@ body {
 }
 
 
-.header {
+footer {
   background-color: yellowgreen; /* rgb(154, 205, 50) */
   height: 20vh; /* 1/5th of the height of the viewport */
   padding: 1em;
@@ -69,62 +69,13 @@ body {
   color: white;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Ensures padding and border are included in width/height */
-}
 
-body {
-  display: flex;
-  height: 100vh;
-}
-
-.navigation-bar {
-  width: 16.67%; /* 1/6th of the width */
-  height: 100vh;
-  background-color: #D7E8D4; /* rgb(215, 232, 212) */
+header {
+  background-color: yellowgreen; /* rgb(154, 205, 50) */
+  height: 20vh; /* 1/5th of the height of the viewport */
   padding: 1em;
-}
-
-.main-content {
   display: flex;
-  flex-direction: column;
-  width: 83.33%; /* 5/6th of the width */
-}
-
-.content-section {
-  display: flex;
-  flex: 1;
-}
-
-.article {
-  flex: 3 1 0%; /* 3 parts of the available space */
-  background-color: wheat;
-  min-height: 60vh; /* Minimum height */
-  padding: 1em;
-}
-
-.aside {
-  flex: 1 1 0%; /* 1 part of the available space */
-  background-color: antiquewhite;
-  min-height: 60vh; /* Minimum height */
-  padding: 1em;
-}
-
-@media (max-width: 768px) {
-  /* Mobile responsiveness */
-  .content-section {
-    flex-direction: column;
-  }
-
-  .article, .aside {
-    width: 100%; /* Full width on mobile */
-    min-height: auto; /* Adjust height on smaller screens */
-  }
-
-  .navigation-bar {
-    width: 100%; /* Full width on smaller screens */
-    height: auto;
-  }
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
