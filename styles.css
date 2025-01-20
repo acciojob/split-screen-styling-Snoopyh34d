@@ -12,7 +12,7 @@ body {
 .navigation-bar {
   width: 16.67%; /* 1/6th of the width */
   height: 100vh;
-  background-color: rgb(215, 232, 212); /* rgb(215, 232, 212) */
+  background-color: #D7E8D4; /* rgb(215, 232, 212) */
   padding: 1em;
 }
 
@@ -27,14 +27,14 @@ body {
   flex: 1;
 }
 
-.article {
+article {
   flex: 3 1 0%; /* 3 parts of the available space */
   background-color: wheat;
   min-height: 60vh; /* Minimum height */
   padding: 1em;
 }
 
-.aside {
+aside {
   flex: 1 1 0%; /* 1 part of the available space */
   background-color: antiquewhite;
   min-height: 60vh; /* Minimum height */
@@ -47,7 +47,7 @@ body {
     flex-direction: column;
   }
 
-  .article, .aside {
+  article, aside {
     width: 100%; /* Full width on mobile */
     min-height: auto; /* Adjust height on smaller screens */
   }
